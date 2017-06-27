@@ -4,8 +4,8 @@
     "kibana": {
         "version": "5.4.0"
     },
-    "author": "clamarque",
+    "author": "krmorris7",
     "description": "change color of metric depending to the planned state of health",
-    "homepage": "https://github.com/clamarque/kibana_health_metric_vis",
+    "homepage": "https://github.com/krmorris7/kibana_health_metric_vis",
     "main": "index.js"
 }
