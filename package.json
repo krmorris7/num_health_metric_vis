@@ -1,5 +1,5 @@
 {
-    "name": "numberless_health_metric_vis",
+    "name": "health_metric_vis",
     "version": "5.4.0",
     "kibana": {
         "version": "5.4.0"
