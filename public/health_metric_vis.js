@@ -18,27 +18,29 @@ function HealthMetricVisProvider(Private) {
 
   // return the visType object, which kibana will use to display and configure new
   // Vis object of this type.
+  // Options tab setup
   return new TemplateVisType({
-    name: 'health-metric',
-    title: 'Health Metric',
+    name: 'status-check',
+    title: 'Status Check',
     image,
-    description: 'Displays a metric with a color according to the planned state of health.',
+    description: 'Displays a color based on the health status of the metric.',
     category: VisType.CATEGORY.DATA,
     template: healthMetricVisTemplate,
     params: {
       defaults: {
         handleNoResults: true,
         fontSize: 60,
-        fontColor: 'white',
+        fontColor: 'black',
         invertScale: false,
         redThreshold: 0,
         yellowThreshold: 0,
-        redColor: "#fd482f",
-        yellowColor: "#ffa500",
-        greenColor: "#6dc066"
+        redColor: "#E51010",
+        yellowColor: "#FF8000",
+        greenColor: "#22A222"
       },
       editor: healthMetricVisParamsTemplate
     },
+    // Data tab setup
     implementsRenderComplete: true,
     schemas: new Schemas([
       {
