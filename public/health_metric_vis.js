@@ -31,6 +31,7 @@ function HealthMetricVisProvider(Private) {
         handleNoResults: true,
         fontSize: 60,
         fontColor: 'white',
+        link: "kibana:5601",
         invertScale: false,
         redThreshold: 4,
         yellowThreshold: 3,
