@@ -32,11 +32,13 @@ function HealthMetricVisProvider(Private) {
         fontSize: 60,
         fontColor: 'black',
         invertScale: false,
-        redThreshold: 0,
-        yellowThreshold: 0,
+        redThreshold: 4,
+        yellowThreshold: 3,
+        greenThreshold: 2,
         redColor: "#E51010",
         yellowColor: "#FF8000",
-        greenColor: "#22A222"
+        greenColor: "#22A222",
+        greyColor: "#8E928E",
       },
       editor: healthMetricVisParamsTemplate
     },
