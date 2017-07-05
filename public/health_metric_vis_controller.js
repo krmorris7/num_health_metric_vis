@@ -15,26 +15,32 @@ module.controller('KbnHealthMetricVisController', function ($scope, $element, Pr
   
   function getColor(val, visParams) {
     if (!visParams.invertScale) {
-      if (val <= visParams.redThreshold) {
+      if (val >= visParams.redThreshold) {
         return visParams.redColor;
       }
-      else if (val <= visParams.yellowThreshold && val > visParams.redThreshold ) {
+      else if (val >= visParams.yellowThreshold && val < visParams.redThreshold) {
         return visParams.yellowColor;
       }
-      else {
+      else if (val >= visParams.greenThreshold && val < visParams.yellowThreshold) {
         return visParams.greenColor;
+      }
+      else {
+        return visParams.greyColor;
       }
     }
     else {
-        if (val >= visParams.redThreshold) {
-            return visParams.redColor;
-        }
-        else if (val >= visParams.yellowThreshold && val < visParams.redThreshold) {
-            return visParams.yellowColor;
-        }
-        else {
-            return visParams.greenColor;
-        }
+      if (val <= visParams.redThreshold) {
+        return visParams.redColor;
+      }
+      else if (val <= visParams.yellowThreshold && val > visParams.redThreshold) {
+        return visParams.yellowColor;
+      }
+      else if (val <= visParams.greenThreshold && val > visParams.yellowThreshold) {
+        return visParams.greenColor;
+      }
+      else {
+        return visParams.greyColor;
+      }
     }
   }
   function getFontColor(val,visParams){
