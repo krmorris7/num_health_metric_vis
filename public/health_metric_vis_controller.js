@@ -51,9 +51,6 @@ module.controller('KbnHealthMetricVisController', function ($scope, $element, Pr
       alert("You can't change the color if there is no value.")
     }
   }
-  function getLink(visParams){
-    return visParams.link;
-  }
 
   $scope.processTableGroups = function (tableGroups) {
     tableGroups.tables.forEach(function (table) {
@@ -63,7 +60,6 @@ module.controller('KbnHealthMetricVisController', function ($scope, $element, Pr
         let formattedValue = isInvalid(value) ? '?' : fieldFormatter(value);
         let color = getColor(value, $scope.vis.params);
         let fontColor = getFontColor(value, $scope.vis.params);
-        let link = getLink(value, $scopt.vis.params);
         
         metrics.push({
           label: column.title,
