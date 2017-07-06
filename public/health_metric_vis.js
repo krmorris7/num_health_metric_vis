@@ -20,8 +20,8 @@ function HealthMetricVisProvider(Private) {
   // Vis object of this type.
   // Options tab setup
   return new TemplateVisType({
-    name: 'status-check',
-    title: 'Status Check',
+    name: 'health-metric',
+    title: 'Health Metric',
     image,
     description: 'Displays a color based on the health status of the metric.',
     category: VisType.CATEGORY.DATA,
