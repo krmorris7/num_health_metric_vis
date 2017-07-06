@@ -70,7 +70,6 @@ module.controller('KbnHealthMetricVisController', function ($scope, $element, Pr
           formattedValue: formattedValue,
           color: color,
           fontColor: fontColor,
-          link: link
         });
       });
     });
