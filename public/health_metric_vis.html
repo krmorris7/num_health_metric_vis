@@ -1,7 +1,7 @@
 <div ng-controller="KbnHealthMetricVisController" class="health-metric-vis">
     <div class="health-metric-container" ng-repeat="metric in metrics">
         <div class="health-metric-value" ng-style="{'background': metric.color, 'color': metric.fontColor }">
-            <div ng-style="{'font-size': vis.params.fontSize+'pt'}"><a href="{{vis.params.link}}" style="color:{{metric.fontColor}}">{{metric.label}}</a></div>
+            <div ng-style="{'font-size': vis.params.fontSize+'pt'}"><a href="{{metric.link}}" style="color:{{metric.fontColor}}">{{metric.label}}</a></div>
             <div></div>
         </div>
     </div>
