@@ -1,15 +1,15 @@
-import 'plugins/health_metric_vis/health_metric_vis.less';
-import 'plugins/health_metric_vis/health_metric_vis_controller';
+import 'plugins/num_health_metric_vis/num_health_metric_vis.less';
+import 'plugins/num_health_metric_vis/num_health_metric_vis_controller';
 import VisVisTypeProvider from 'ui/vis/vis_type';
 import TemplateVisTypeTemplateVisTypeProvider from 'ui/template_vis_type/template_vis_type';
 import VisSchemasProvider from 'ui/vis/schemas';
-import healthMetricVisTemplate from 'plugins/health_metric_vis/health_metric_vis.html';
-import healthMetricVisParamsTemplate from 'plugins/health_metric_vis/health_metric_vis_params.html';
+import healthMetricVisTemplate from 'plugins/num_health_metric_vis/num_health_metric_vis.html';
+import healthMetricVisParamsTemplate from 'plugins/num_health_metric_vis/num_health_metric_vis_params.html';
 import visTypesRegistry from 'ui/registry/vis_types';
 import image from './images/icon-number.svg';
 
 // Register the provider with the visTypes registry
-visTypesRegistry.register(HealthMetricVisProvider);
+visTypesRegistry.register(NumHealthMetricVisProvider);
 
 function HealthMetricVisProvider(Private) {
   const VisType = Private(VisVisTypeProvider)
@@ -20,12 +20,12 @@ function HealthMetricVisProvider(Private) {
   // Vis object of this type.
   // Options tab setup
   return new TemplateVisType({
-    name: "health-metric",
-    title: "Health Metric",
+    name: "num-health-metric",
+    title: "Health Metric w/ Numbers",
     image,
     description: 'Displays a color based on the health status of the metric.',
     category: VisType.CATEGORY.DATA,
-    template: healthMetricVisTemplate,
+    template: numHealthMetricVisTemplate,
     params: {
       defaults: {
         handleNoResults: true,
@@ -41,7 +41,7 @@ function HealthMetricVisProvider(Private) {
         greenColor: "#22A222",
         greyColor: "#767676",
       },
-      editor: healthMetricVisParamsTemplate
+      editor: numHealthMetricVisParamsTemplate
     },
     // Data tab setup
     implementsRenderComplete: true,
@@ -62,4 +62,4 @@ function HealthMetricVisProvider(Private) {
 }
 
 // export the provider so that the visType can be required with Private()
-export default HealthMetricVisProvider;
+export default NumHealthMetricVisProvider;
