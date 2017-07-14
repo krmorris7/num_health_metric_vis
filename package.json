@@ -6,6 +6,6 @@
     },
     "author": "krmorris7",
     "description": "change color of metric depending to the planned state of health; includes numbers",
-    "homepage": "https://github.com/krmorris7/kibana_health_metric_vis",
+    "homepage": "https://github.com/krmorris7/num_health_metric_vis",
     "main": "index.js"
 }
