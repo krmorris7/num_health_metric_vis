@@ -3,15 +3,15 @@ import 'plugins/num_health_metric_vis/num_health_metric_vis_controller';
 import VisVisTypeProvider from 'ui/vis/vis_type';
 import TemplateVisTypeTemplateVisTypeProvider from 'ui/template_vis_type/template_vis_type';
 import VisSchemasProvider from 'ui/vis/schemas';
-import healthMetricVisTemplate from 'plugins/num_health_metric_vis/num_health_metric_vis.html';
-import healthMetricVisParamsTemplate from 'plugins/num_health_metric_vis/num_health_metric_vis_params.html';
+import numHealthMetricVisTemplate from 'plugins/num_health_metric_vis/num_health_metric_vis.html';
+import numHealthMetricVisParamsTemplate from 'plugins/num_health_metric_vis/num_health_metric_vis_params.html';
 import visTypesRegistry from 'ui/registry/vis_types';
 import image from './images/icon-number.svg';
 
 // Register the provider with the visTypes registry
 visTypesRegistry.register(NumHealthMetricVisProvider);
 
-function HealthMetricVisProvider(Private) {
+function NumHealthMetricVisProvider(Private) {
   const VisType = Private(VisVisTypeProvider)
   const TemplateVisType = Private(TemplateVisTypeTemplateVisTypeProvider);
   const Schemas = Private(VisSchemasProvider);
