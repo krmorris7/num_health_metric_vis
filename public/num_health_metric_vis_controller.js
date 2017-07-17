@@ -4,7 +4,7 @@ import uiModules from 'ui/modules';
 
 const module = uiModules.get('kibana/num_health_metric_vis', ['kibana']);
 
-module.controller('KbnHealthMetricVisController', function ($scope, $element, Private) {
+module.controller('KbnNumHealthMetricVisController', function ($scope, $element, Private) {
   const tabifyAggResponse = Private(AggResponseTabifyTabifyProvider);
 
   const metrics = $scope.metrics = [];
